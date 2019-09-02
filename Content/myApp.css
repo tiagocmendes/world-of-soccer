@@ -1,0 +1,566 @@
+﻿
+/*Navbar style*/
+
+/* Add a dark background color with a little bit see-through */
+@import url('https://fonts.googleapis.com/css?family=Barlow:700');
+
+html {
+    font-family: 'Barlow', sans-serif;
+}
+
+td {
+    color:#2d2d30
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 0.9em; !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    font-family: 'Barlow', sans-serif;
+    text-transform:uppercase
+}
+
+    /* Add a gray color to all navbar links */
+    .navbar li a, .navbar .navbar-brand {
+        color: #d5d5d5 !important;
+    }
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+    /* On hover, the dropdown links will turn red */
+    .dropdown-menu li a:hover {
+        background-color: red !important;
+    } 
+
+
+/*FOOTER STYLE*/
+
+/* Add a dark background color to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+        color: #f5f5f5;
+    }
+
+footer a:hover {
+            color: #777;
+            text-decoration: none;
+        }
+
+
+
+.masthead {
+    display: table;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    color: white;
+    position:relative;
+    margin-top:-12px;
+    background-size: cover;
+    background-color: black;
+    background-image: url('images/Background3.jpg');
+}
+
+.masthead2 {
+    display: table;
+    width: 100%;
+    height: 750px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -62px;
+    background-size: cover;
+    background-color: black;
+    background-image: url('images/Background.png');
+}
+
+.masthead3 {
+    display: table;
+    width: 100%;
+    height: 750px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -62px;
+    background-size: cover;
+    background-color: black;
+    background-image: url('images/Background2.jpg');
+}
+
+.masthead4 {
+    display: table;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -62px;
+    background-size: cover;
+    background-color: black;
+    background-image: url('images/Background4.jpg');
+}
+.masthead5 {
+    display: table;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -62px;
+    background-size: cover;
+    background-color: black;
+    background-image: url('images/Background5.jpg');
+}
+
+.logo {
+    height:300px;
+    width:auto;
+    position:center;
+    text-align:center;
+    margin-top:150px;
+}
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+    min-height:400px;
+}
+
+    .bg-1 h3 {
+        color: #bdbdbd;
+    }
+
+.wicons {
+    margin-top:40px;
+    position:center;
+    text-align:center;
+    margin-left:20px;
+}
+
+.containerw {
+    background-color: ghostwhite;
+    color: #2d2d30;
+    min-height: 50px;
+}
+
+.wlcimage{
+    height: 250px;
+    width: 250px;
+}
+
+.bg-2 {
+    background-color: ghostwhite;
+    color: #2d2d30;
+}
+
+
+.countriesLink {
+    position: absolute;
+    background-color: #bdbdbd;
+    width: 250px;
+    height: 50px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 9px;
+    color: #2d2d30;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold
+}
+    .countriesLink:hover {
+        background-color: #0F0F0E;
+        color: #bdbdbd;
+        transition: 0.2s;
+        opacity: 0.6;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+.leaguesLink {
+    position: absolute;
+    background-color: #bdbdbd;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    color: #2d2d30;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold
+}
+.leaguesLink:hover {
+    background-color: #0F0F0E;
+    color: #bdbdbd;
+    transition: 0.2s;
+    opacity: 0.6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.teamsLink {
+    background-color: #2d2d30;
+    text-align: center;
+    padding: 0px 30px 5px 30px;
+    color: #bdbdbd;
+    font-family: 'Barlow', sans-serif;
+}
+    .teamsLink:hover {
+        background-color: #0F0F0E;
+        color: white;
+        transition: 0.2s;
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+/**THE SAME CSS IS USED IN ALL 3 DEMOS**/
+/**gallery margins**/
+ul.gallery {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.zoom {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+
+    .zoom:hover,
+    .zoom:active,
+    .zoom:focus {
+        /**adjust scale to desired size, 
+add browser prefixes**/
+        -ms-transform: scale(2.5);
+        -moz-transform: scale(2.5);
+        -webkit-transform: scale(2.5);
+        -o-transform: scale(2.5);
+        transform: scale(2.5);
+        position: relative;
+        z-index: 100;
+    }
+
+/**To keep upscaled images visible on mobile, 
+increase left & right margins a bit**/
+@media only screen and (max-width: 768px) {
+    ul.gallery {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    /**TIP: Easy escape for touch screens,
+give gallery's parent container a cursor: pointer.**/
+    .DivName {
+        cursor: pointer
+    }
+}
+
+.boarderScore {
+    background-image: url('images/ScoreBoard.png');
+    height:100%;
+    width:100%;
+    margin-top:-150px;
+    background-repeat: no-repeat;
+    background-position:center
+}
+
+/*POSIÇÕES DOS JOGADORES*/
+
+.pos_1_1 {
+    top: 295px;
+    left: 200px;
+}
+
+.pos_3_1 {
+    top: 260px;
+    left: 396px;
+}
+
+.pos_3_2 {
+    top: 260px;
+    left: 365px;
+}
+
+.pos_3_3 {
+    top: 260px;
+    left: 298px;
+}
+
+.pos_3_4 {
+    top: 260px;
+    left: 255px;
+}
+
+.pos_3_5 {
+    top: 260px;
+    left: 200px;
+}
+
+.pos_3_6 {
+    top: 260px;
+    left: 145px;
+}
+
+.pos_3_7 {
+    top: 260px;
+    left: 102px;
+}
+
+.pos_3_8 {
+    top: 260px;
+    left: 35px;
+}
+
+.pos_3_9 {
+    top: 260px;
+    left: 4px;
+}
+
+.pos_5_3 {
+    top: 195px;
+    left: 298px;
+}
+
+.pos_5_4 {
+    top: 195px;
+    left: 255px;
+}
+
+.pos_5_5 {
+    top: 195px;
+    left: 200px;
+}
+
+.pos_5_6 {
+    top: 195px;
+    left: 145px;
+}
+
+.pos_5_7 {
+    top: 195px;
+    left: 102px;
+}
+
+.pos_6_3 {
+    top: 155px;
+    left: 298px;
+}
+
+.pos_6_4 {
+    top: 155px;
+    left: 255px;
+}
+
+.pos_6_5 {
+    top: 155px;
+    left: 200px;
+}
+
+.pos_6_6 {
+    top: 155px;
+    left: 145px;
+}
+
+.pos_6_7 {
+    top: 155px;
+    left: 102px;
+}
+
+.pos_7_1 {
+    top: 125px;
+    left: 396px;
+}
+
+.pos_7_2 {
+    top: 125px;
+    left: 365px;
+}
+
+.pos_7_3 {
+    top: 125px;
+    left: 298px;
+}
+
+.pos_7_4 {
+    top: 125px;
+    left: 255px;
+}
+
+.pos_7_5 {
+    top: 125px;
+    left: 200px;
+}
+
+.pos_7_6 {
+    top: 125px;
+    left: 145px;
+}
+
+.pos_7_7 {
+    top: 125px;
+    left: 102px;
+}
+
+.pos_7_8 {
+    top: 125px;
+    left: 35px;
+}
+
+.pos_7_9 {
+    top: 125px;
+    left: 4px;
+}
+
+.pos_8_1 {
+    top: 95px;
+    left: 396px;
+}
+
+.pos_8_2 {
+    top: 95px;
+    left: 365px;
+}
+
+.pos_8_3 {
+    top: 95px;
+    left: 298px;
+}
+
+.pos_8_4 {
+    top: 95px;
+    left: 255px;
+}
+
+.pos_8_5 {
+    top: 95px;
+    left: 200px;
+}
+
+.pos_8_6 {
+    top: 95px;
+    left: 145px;
+}
+
+.pos_8_7 {
+    top: 95px;
+    left: 102px;
+}
+
+.pos_8_8 {
+    top: 95px;
+    left: 35px;
+}
+
+.pos_8_9 {
+    top: 95px;
+    left: 4px;
+}
+
+.pos_9_4 {
+    top: 60px;
+    left: 255px;
+}
+
+.pos_9_5 {
+    top: 60px;
+    left: 200px;
+}
+
+.pos_9_6 {
+    top: 60px;
+    left: 145px;
+}
+
+.pos_10_3 {
+    top: 30px;
+    left: 298px;
+}
+
+.pos_10_4 {
+    top: 30px;
+    left: 255px;
+}
+
+.pos_10_5 {
+    top: 30px;
+    left: 200px;
+}
+
+.pos_10_6 {
+    top: 30px;
+    left: 145px;
+}
+
+.pos_10_7 {
+    top: 30px;
+    left: 102px;
+}
+
+.pos_11_4 {
+    top: 20px;
+    left: 255px;
+}
+
+.pos_11_5 {
+    top: 20px;
+    left: 200px;
+}
+
+.pos_11_6 {
+    top: 20px;
+    left: 145px;
+}
+
+.myFrame {
+    margin-top:50px;
+    margin-bottom:50px;
+    border: solid;
+    height: 300px;
+    width: 100%;
+}
+
+
+
+
+
+

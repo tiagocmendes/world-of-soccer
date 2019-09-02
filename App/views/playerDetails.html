@@ -1,0 +1,135 @@
+﻿<section>
+    <div class="bg-1" style="margin-top:-10px ; min-height:460px;">
+        <div class="container">
+            <div data-bind="foreach: playerDetails">
+                <div class="row">
+                    <h1 class="text-center">Player Details</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <img class="img-responsive center-block" data-bind="attr: {src: 'https://cdn.sofifa.org/18/players/' + player_fifa_api_id + '.png'}" style="height:120px;width:120px;" onerror="this.src = 'https://cdn.sofifa.org/player.png'" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h3 class="text-center"><span data-bind="html: player_name"></span><small>[id: <span data-bind="html: id"></span>]</small></h3><hr /></div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h4 class="text-center"><span style="font-weight: bold; ">Birthday:</span> <span data-bind="html: birthday.split('T')[0]"></span></h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h4 class="text-center"><span style="font-weight: bold; ">Height(cm):</span> <span data-bind="html: height"></span></h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h4 class="text-center"><span style="font-weight: bold; ">Weight(lbs):</span> <span data-bind="html: weight"></span></h4></div>
+                </div>
+            </div>
+            <div data-bind="foreach: playerAttributes">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h4 class="text-center"><span style="font-weight: bold; ">Preferred Foot:</span> <span data-bind="html: preferred_foot"></span></h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h4 class="text-center">Overall rating <span class="label label-danger" data-bind="html: overall_rating"></span></h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4"><h4 class="text-center">Potencial <span class="label label-danger" data-bind="html: potential"></span></h4></div>
+                </div>
+                <div class="row">
+                    <hr />
+                    <h3>Player Attributes <small>(<span data-bind="html: date.split('T')[0]"></span>)</small></h3>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Attacking</h4></li>
+                            <li><h5><span class="label label-danger" data-bind="html: crossing" style="font-size:0.9em;"></span> Crossing</h5></li>
+                            <li><h5><span class="label label-danger" data-bind="html: finishing" style="font-size:0.9em;"></span> Finishing</h5></li>
+                            <li><h5><span class="label label-danger" data-bind="html: heading_accuracy" style="font-size:0.9em;"></span> Heading ACC</h5></li>
+                            <li><h5><span class="label label-danger" data-bind="html: short_passing" style="font-size:0.9em;"></span> Short Passing</h5></li>
+                            <li><h5><span class="label label-danger" data-bind="html: volleys" style="font-size:0.9em;"></span> Volleys</h5></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Skill</h4></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: dribbling"></span> Dribbling             </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: curve"></span> Curve                     </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: free_kick_accuracy"></span> Free Kick ACC</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: long_passing"></span> Long Passing       </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: ball_control"></span> Ball Control       </h5></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Movement</h4></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: acceleration"></span> Acceleration</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: sprint_speed"></span> Sprint Speed</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: agility"></span> Agility          </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: reactions"></span> Reactions      </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: balance"></span> Balance          </h5></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Power</h4></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: shot_power"></span> Shot Power</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: jumping"></span> Jumping      </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: stamina"></span> Stamina      </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: strength"></span> Strength    </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: long_shots"></span> Long Shots</h5></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Mentality</h4></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: aggression"></span> Aggression      </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: interceptions"></span> Interceptions</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: positioning"></span> Positioning    </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: vision"></span> Vision              </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: penalties"></span> Penalties        </h5></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Defending</h4></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: marking"></span> Marking                </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: standing_tackle"></span> Standing Tackle</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: sliding_tackle"></span> Sliding Tackle  </h5></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <ul style="list-style:none;">
+                            <li><h4 style="font-weight: bold;">Goalkeeping</h4></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: gk_diving"></span> Diving          </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: gk_handling"></span> Handling      </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: gk_kicking"></span> Kicking        </h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: gk_positioning"></span> Positioning</h5></li>
+                            <li><h5><span class="label label-danger" style="font-size:0.9em;" data-bind="html: gk_reflexes"></span> Reflexes      </h5></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+
+    <footer class="text-center bottom">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>

@@ -1,0 +1,57 @@
+﻿<section>
+    <div class="bg-1" style="margin-top:-10px">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">Match Details</h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4"  data-bind="foreach: matchDetails">
+                    <a data-bind="attr: {href: '#leagueDetails/' + league_id}"><img class="center-block" data-bind="attr:{src:'../../Content/leaguelogos/' + league_id + '.png'}" style="height:250px;width:auto;" /></a>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:20px;">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-6">
+                    <div class="col-xs-5"  data-bind="foreach: matchDetails"><h4>Season: <span data-bind="html: season"></span> </h4></div>
+                    <div class="col-xs-1"  data-bind="foreach: matchDetails"><img data-bind="attr:{src:'../../Content/countriesflags/' + country_id + '.png'}" style="height:20px;width:auto; margin-top:10px;" /></div>
+                    <div class="col-xs-3"  data-bind="foreach: leagueDetails"><h4><a data-bind="html: countryName, attr:{href: '#countryDetails/' + id}"></a></h4></div>
+                    <div class="col-xs-3"  data-bind="foreach: matchDetails"><h4>Stage: <span data-bind="html:stage" ></span></h4></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row" data-bind="foreach: matchDetails" style="margin-top:100px; background-image: url('../../Content/images/ScoreBoard.png'); background-repeat: no-repeat; height:100%; width:100%; background-position:center; margin-left:10px;">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-1"><img style="height:120px; width:120px; margin-left:-45px" data-bind="attr: {src: 'https://cdn.sofifa.org/18/teams/' + home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" /></div>
+        <div class="col-xs-1"><h3 style="margin-top:55%; font-family: 'Barlow', sans-serif; "><a data-bind="html: home_team.team_short_name, attr: {href: '#teamDetails/' + home_team.id }"></a></h3></div>
+        <div class="col-xs-2"><h3 style="text-align:center; margin-top:-10%; font-family: 'Barlow', sans-serif; font-weight:bold;" data-bind="html: date.split('T')[0]"></h3><h1 style="color:white; text-align:center; margin-top:18%;"><span data-bind="html: home_team_goal"></span> : <span data-bind="html: away_team_goal"></span></h1></div>
+        <div class="col-xs-1"><h3 style="margin-top:55%; font-family: 'Barlow', sans-serif; text-align: right; margin-right:-10px;"><a data-bind="html: away_team.team_short_name, attr: {href: '#teamDetails/' + away_team.id }"></a></h3></div>
+        <div class="col-xs-1"><img style="height:120px; width:120px; " data-bind="attr: {src: 'https://cdn.sofifa.org/18/teams/' + away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" /></div>
+        <div class="col-xs-3"></div>
+    </div>
+    <div class="row" style="margin-top:50px;">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-5">
+            <div class="container" style="background-image: url('https://cdn.sofifa.org/img/field.png'); height:360px; width:480px; position:relative;" data-bind="foreach: homePlayers">
+                <a data-bind="attr: {href: '#playerDetails/' + id}"><img data-bind="css: CSSClass, attr: {src: 'https://cdn.sofifa.org/18/players/' + player_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/player.png';" style="height:4em;width:4em; position:absolute;" /></a>
+                <a style="display: inline-block; padding: 0 .5rem; background-color: rgba(0,0,0,0.75); white-space: nowrap; text-overflow: ellipsis; color: #FFF; width: 8rem; text-decoration: none; border-radius: 2px; overflow: hidden; vertical-align: top; position:absolute; text-align:center; margin-top:55px; margin-left:-13px;" data-bind="html: player_name, css: CSSClass, attr: {href: '#playerDetails/' + id}"></a>
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="container" style="background-image: url('https://cdn.sofifa.org/img/field.png'); height:360px; width:480px; position:relative;" data-bind="foreach: awayPlayers">
+                <a data-bind="attr: {href: '#playerDetails/' + id}"><img data-bind="css: CSSClass, attr: {src: 'https://cdn.sofifa.org/18/players/' + player_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/player.png';" style="height:4em;width:4em; position:absolute;" /></a>
+                <a style="display: inline-block; padding: 0 .5rem; background-color: rgba(0,0,0,0.75); white-space: nowrap; text-overflow: ellipsis; color: #FFF; width: 8rem; text-decoration: none; border-radius: 2px; overflow: hidden; vertical-align: top; position:absolute; text-align:center; margin-top:55px; margin-left:-13px; " data-bind="html: player_name, css: CSSClass, attr: {href: '#playerDetails/' + id}"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-center bottom" style="margin-top:50px;">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>

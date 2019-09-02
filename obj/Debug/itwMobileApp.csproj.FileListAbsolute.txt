@@ -1,0 +1,45 @@
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\itwMobileApp.dll.config
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\itwMobileApp.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\itwMobileApp.pdb
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Antlr3.Runtime.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Newtonsoft.Json.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\System.Web.Optimization.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\WebActivator.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\WebGrease.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Antlr3.Runtime.pdb
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\Newtonsoft.Json.xml
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\bin\System.Web.Optimization.xml
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\obj\Debug\itwMobileApp.csprojResolveAssemblyReference.cache
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\obj\Debug\itwMobileApp.dll
+C:\Users\Joaquim Sousa Pinto\documents\visual studio 2013\Projects\ITW-Projeto 1\itwMobileApp\obj\Debug\itwMobileApp.pdb
+C:\Users\Tiago\Desktop\itwProjetoFinal\bin\itwMobileApp.dll.config
+C:\Users\Tiago\Desktop\itwProjetoFinal\bin\itwMobileApp.dll
+C:\Users\Tiago\Desktop\itwProjetoFinal\bin\itwMobileApp.pdb
+C:\Users\Tiago\Desktop\itwProjetoFinal\bin\Antlr3.Runtime.pdb
+C:\Users\Tiago\Desktop\itwProjetoFinal\bin\Newtonsoft.Json.xml
+C:\Users\Tiago\Desktop\itwProjetoFinal\bin\System.Web.Optimization.xml
+C:\Users\Tiago\Desktop\itwProjetoFinal\obj\Debug\itwMobileApp.csprojResolveAssemblyReference.cache
+C:\Users\Tiago\Desktop\itwProjetoFinal\obj\Debug\itwMobileApp.csproj.CoreCompileInputs.cache
+C:\Users\Tiago\Desktop\itwProjetoFinal\obj\Debug\itwMobileApp.dll
+C:\Users\Tiago\Desktop\itwProjetoFinal\obj\Debug\itwMobileApp.pdb
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\bin\itwMobileApp.dll.config
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\bin\itwMobileApp.dll
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\bin\itwMobileApp.pdb
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\bin\Antlr3.Runtime.pdb
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\bin\Newtonsoft.Json.xml
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\bin\System.Web.Optimization.xml
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.csprojResolveAssemblyReference.cache
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.csproj.CoreCompileInputs.cache
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.dll
+C:\Users\Tiago\Desktop\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.pdb
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\bin\itwMobileApp.dll.config
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\bin\itwMobileApp.dll
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\bin\itwMobileApp.pdb
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\bin\Antlr3.Runtime.pdb
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\bin\Newtonsoft.Json.xml
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\bin\System.Web.Optimization.xml
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.csprojResolveAssemblyReference.cache
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.csproj.CoreCompileInputs.cache
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.dll
+D:\Universidade de Aveiro\Engenharia Informática\Material Tiago Mendes\1º ano\1º Semestre\Introdução às Tecnologias Web\World Of Soccer\World Of Soccer - 88886, 88887\obj\Debug\itwMobileApp.pdb

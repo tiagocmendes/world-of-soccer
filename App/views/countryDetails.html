@@ -1,0 +1,29 @@
+﻿<section data-bind="foreach: countryDetails">
+    <div class="bg-2" style="min-height:700px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-3" style="margin-top:10%">
+                    <img style="height:250px; width:auto;" class="img-responsive" data-bind="attr: {src: '../../Content/leaguelogos/' + id + '.png' }" />
+                </div>
+                <div class="col-xs-7">
+                    <a class="teamsLink" style="position:absolute; margin-top:27%" data-bind="attr: {href: '#leagueDetails/' + id }"><h2 data-bind="html: name"></h2></a>
+                    <img class="img-responsive" style="height:40px;margin-top:40%; position:relative; width:auto; border:3px solid #2d2d30;" data-bind="attr: {src: '../../Content/countriesflags/' + id + '.png'}" /><h4 data-bind="html: countryName"></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <iframe id="mapa" class="myFrame" frameborder="0" style="border:0" data-bind="attr: {src:'https://www.google.com/maps/embed/v1/place?key=AIzaSyDcMecago455EMI3N6GmN8xycR_-YbTyK8&q=' + countryName + '&zoom=5' }" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bottom">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>

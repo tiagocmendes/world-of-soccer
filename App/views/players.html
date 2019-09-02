@@ -1,0 +1,59 @@
+﻿<section>
+    <div class="masthead5">
+        <div class="container">
+            <a><img class="logo" style="height:200px; margin-top:300px;" src="../../Content/images/Players.png" /></a>
+        </div>
+    </div>
+
+    <div class="bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10"><div class="page-header"><h2>Search players:</h2></div></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for..." data-bind="value: playersInput">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" data-bind="click: getPlayers"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <button class="btn btn-default" type="button" data-bind="click: removePlayers"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10">
+                    <h3>Players Found [<span data-bind="html: players().length"></span>]</h3>
+                    <table class="table table-hover" style="background-color: ghostwhite;">
+                        <thead>
+                            <tr>
+                                <th class="col-xs-5" style="font-weight:bold; color: #2d2d30">Name</th>
+                                <th class="col-xs-3" style="font-weight:bold; color: #2d2d30">Birthday</th>
+                                <th class="col-xs-2" style="font-weight:bold; color: #2d2d30">Height (cm)</th>
+                                <th class="col-xs-2" style="font-weight:bold; color: #2d2d30">Weight (lbs)</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: players">
+                            <tr>
+                                <td class="col-xs-5"><img data-bind="attr: {src: 'https://cdn.sofifa.org/18/players/' + player_fifa_api_id + '.png'}" style="height:50px;width:50px;" onerror="this.src = 'https://cdn.sofifa.org/player.png'" /> <a data-bind="html: player_name, attr: {href: '#playerDetails/' + id}"></a></td>
+                                <td class="col-xs-3"><h5 data-bind="html: birthday.split('T')[0]" style="margin-left:13px;"></h5></td>
+                                <td class="col-xs-2"><h5 data-bind="html: height"></h5></td>
+                                <td class="col-xs-2"><h5 data-bind="html: weight"></h5></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bottom">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>

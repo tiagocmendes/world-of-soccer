@@ -1,0 +1,2068 @@
+﻿<section>
+    <div class="container" style="margin-top:100px;">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10" data-bind="foreach: teamDetails">
+                <div class="col-sm-2"><img style="height:110px; width:110px; margin-left: 30px;" data-bind="attr: {src: 'https://cdn.sofifa.org/18/teams/' + team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" /></div>
+                <div class="col-sm-10"><div class="page-header"><h1><span data-bind="html: team_long_name"></span> <small data-bind="html: '['+ team_short_name +']'"></small></h1></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10"><div class="page-header"><h2>Team Seasons</h2></div></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">2015/2016</a></li>
+                    <li><a data-toggle="tab" href="#menu1">2014/2015</a></li>
+                    <li><a data-toggle="tab" href="#menu2">2013/2014</a></li>
+                    <li><a data-toggle="tab" href="#menu3">2012/2013</a></li>
+                    <li><a data-toggle="tab" href="#menu4">2011/2012</a></li>
+                    <li><a data-toggle="tab" href="#menu5">2010/2011</a></li>
+                    <li><a data-toggle="tab" href="#menu6">2009/2010</a></li>
+                    <li><a data-toggle="tab" href="#menu7">2008/2009</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="tab-content" style="min-height: 400px;">
+                    <div class="tab-pane fade in active" id="home">
+                        <div class="row">
+                            <h3>2015/2016 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/16/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/16/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/16/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/16/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">2015/2016 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season1516A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2015/2016 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season1516M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season1516M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu1">
+                        <div class="row">
+                            <h3>2014/2015 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/15/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/15/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/15/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/15/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion1" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3">2014/2015 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season1415A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse4">2014/2015 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season1415M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season1415M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu2">
+                        <div class="row">
+                            <h3>2013/2014 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/14/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/14/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/14/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/14/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion2" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5">2013/2014 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season1314A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">2013/2014 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season1314M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season1314M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu3">
+                        <div class="row">
+                            <h3>2012/2013 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/13/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/13/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/13/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/13/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion3" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse7">2012/2013 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season1213A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse8">2012/2013 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season1213M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season1213M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu4">
+                        <div class="row">
+                            <h3>2011/2012 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/12/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/12/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/12/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/12/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion4" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse9">2011/2012 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse9" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season1112A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse10">2011/2012 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse10" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season1112M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season1112M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu5">
+                        <div class="row">
+                            <h3>2010/2011 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/11/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/11/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/11/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/11/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion5" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">2010/2011 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse11" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season1011A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapse12">2010/2011 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse12" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season1011M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season1011M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu6">
+                        <div class="row">
+                            <h3>2009/2010 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/10/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/10/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/10/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/10/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion6" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapse13">2009/2010 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse13" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season0910A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion6" href="#collapse14">2009/2010 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse14" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season0910M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season0910M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade in" id="menu7">
+                        <div class="row">
+                            <h3>2008/2009 Season Kits</h3>
+                        </div>
+                        <div class="row" style="margin-top:20px;" data-bind="foreach: teamDetails">
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/09/kits/' + team_fifa_api_id + '/0_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Home Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/09/kits/' + team_fifa_api_id + '/1_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Away Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/09/kits/' + team_fifa_api_id + '/2_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Goalkeeper Kit</div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="row"><div class="col-sm-3"></div><img class="thumbnail zoom" style="height:120px; width:100px;" data-bind="attr: {src: 'https://cdn.sofifa.org/09/kits/' + team_fifa_api_id + '/3_0.png'}" onerror="this.src = '../../Content/images/Default T-shirt.png'" /></div>
+                                <hr />
+                                <div class="row"><div class="col-sm-4"></div>Third Kit</div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion7" style="margin-top:30px;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion7" href="#collapse15">2008/2009 Team Attributes</a>
+                                    </h3>
+                                </div>
+                                <div id="collapse15" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div data-bind="foreach: season0809A">
+                                            <div class="row" style="text-align:center;">
+                                                <h3><i class="fa fa-futbol-o"></i> Build Up Play</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + buildupplayspeed">
+                                                            <span data-bind="html: buildupplayspeed + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Speed: <span data-bind="html: buildupplayspeedclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + buildupplaydribbling">
+                                                            <span data-bind="html: buildupplaydribbling + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Dribbling: <span data-bind="html: buildupplaydribblingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + buildupplaypassing">
+                                                            <span data-bind="html: buildupplaypassing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: buildupplaypassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: buildupplaypositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Chance Creation</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + chancecreationpassing">
+                                                            <span data-bind="html: chancecreationpassing + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Passing: <span data-bind="html: chancecreationpassingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + chancecreationcrossing">
+                                                            <span data-bind="html: chancecreationcrossing + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Crossing: <span data-bind="html: chancecreationcrossingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + chancecreationshooting">
+                                                            <span data-bind="html: chancecreationshooting + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Shooting: <span data-bind="html: chancecreationshootingclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: chancecreationpositioningclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Positioning</h4></div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align:center; margin-top:20px;">
+                                                <h3><i class="fa fa-futbol-o"></i> Defence</h3>
+                                            </div>
+                                            <div class="row" style="margin-top:20px;">
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large blue" data-bind="css: 'p' + defencepressure">
+                                                            <span data-bind="html: defencepressure + '%'"><br /></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #307BBB;"><i class="fa fa-caret-right" aria-hidden="true"></i> Pressure: <span data-bind="html: defencepressureclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large green" data-bind="css: 'p' + defenceaggression">
+                                                            <span data-bind="html: defenceaggression + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #4DB53C;"><i class="fa fa-caret-right" aria-hidden="true"></i> Aggression: <span data-bind="html: defenceaggressionclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 large orange" data-bind="css: 'p' + defenceteamwidth">
+                                                            <span data-bind="html: defenceteamwidth + '%'"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4 style="color: #DD9D22;"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Width: <span data-bind="html: defenceteamwidthclass"></span></h4></div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <div class="row">
+                                                        <div class="col-sm-3"></div>
+                                                        <div class="c100 p100 large dark">
+                                                            <span style="color:white;" data-bind="html: defencedefenderlineclass"></span>
+                                                            <div class="slice">
+                                                                <div class="bar"></div>
+                                                                <div class="fill"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="text-align:center; margin-top:10px;"><h4><i class="fa fa-caret-right" aria-hidden="true"></i> Defender Line</h4></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion7" href="#collapse16">2008/2009 Season Matches </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse16" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-sm-4"><h3>Team Matches [<span data-bind="html: season0809M().length"></span>]</h3></div>
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-sm-1" style="text-align:center;">Stage</th>
+                                                    <th class="col-sm-3">Home</th>
+                                                    <th class="col-sm-1">HG</th>
+                                                    <th class="col-sm-1">AG</th>
+                                                    <th class="col-sm-3" style="text-align:left;">Away</th>
+                                                    <th class="col-sm-2">Match Date</th>
+                                                    <th class="col-sm-1">View</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody data-bind="foreach: season0809M">
+                                                <tr>
+                                                    <td class="col-sm-1" style="text-align:center;" data-bind="html: stage"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ home_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: home_team.team_long_name, attr: {href: '#teamDetails/' + home_team.id}"></a> </td>
+                                                    <td class="col-sm-1" data-bind="html: home_team_goal"></td>
+                                                    <td class="col-sm-1" data-bind="html: away_team_goal"></td>
+                                                    <td class="col-sm-3"><img style="height: 50px; width: 50px;" data-bind="attr: { src: 'https://cdn.sofifa.org/18/teams/'+ away_team.team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" />  <a style="margin-left:5px;" data-bind="html: away_team.team_long_name, attr: {href: '#teamDetails/' + away_team.id}"></a></td>
+                                                    <td class="col-sm-2" data-bind="html: date.split('T')[0]"></td>
+                                                    <td class="col-sm-1"><a class="btn btn-primary" data-bind="attr: {href: '#matchDetails/' + id}"><i class="fa fa-eye"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bottom">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>

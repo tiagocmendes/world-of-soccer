@@ -1,0 +1,65 @@
+﻿<section>
+    <div class="bg-1" style="margin-top:-10px ; /*box-shadow: 10px 10px 5px grey;*/"  data-bind="foreach: leagueDetails">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">League Details</h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <img class="center-block" data-bind="attr:{src:'../../Content/leaguelogos/' + id + '.png'}" style="height:250px;width:auto;"/>
+                </div>
+            </div>
+            <div class="row">
+                <h3 data-bind="html:name" class="text-center"></h3>
+            </div>
+            <div class="row" style="margin-bottom:20px;">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-6" style="margin-left:40px;">
+                    <div class="col-xs-3"><h4>Seasons: <span data-bind="html:seasons"></span> </h4></div>
+                    <div class="col-xs-1"><img data-bind="attr:{src:'../../Content/countriesflags/' + id + '.png'}" style="height:20px;width:auto; margin-top:10px;" /></div>
+                    <div class="col-xs-3"><h4><a data-bind="html: countryName, attr:{href: '#countryDetails/' + id}"></a></h4></div>
+                    <div class="col-xs-4"><h4>Matches: <span data-bind="html:matches" ></span></h4></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-2">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-10">
+                <h3 style="margin-top:30px;font-weight:bold;">League Teams [<span data-bind="html: leagueTeams().length"></span>]</h3>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-8">
+                    <table class=" table table-hover" style="margin-top:10px; font-size:1.2em">
+                        <thead>
+                            <tr style="font-weight:bold;">
+                                <th >Name</th>
+                                <th>Acronym</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: leagueTeams">
+                            <tr>
+                                <td><img style="height:50px; width:50px;" data-bind="attr: {src: 'https://cdn.sofifa.org/18/teams/' + team_fifa_api_id + '.png'}" onerror="this.src = 'https://cdn.sofifa.org/team.png'" /> <a data-bind="html: team_long_name, attr: {href: '#teamDetails/' + id}"></a></td>
+                                <td data-bind="html: team_short_name"></td>
+                            </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+    </div>
+
+
+    <footer class="text-center bottom">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>

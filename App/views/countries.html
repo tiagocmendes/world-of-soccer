@@ -1,0 +1,29 @@
+﻿<section>
+    <div class="masthead2">
+        <div class="container">
+            <a><img class="logo" style="height:200px; margin-top:300px;" src="../../Content/images/Countries.png" /></a>
+        </div>
+    </div>
+    
+    <div class="bg-1" style="min-height: 900px;">
+        <div class="container">
+            <div class="row" data-bind="foreach: countries">
+                <div class="col-xs-3" style="margin-top:100px;">
+                    <img class="img-responsive" data-bind="attr: {src: '../../Content/countriesflags/' + id + '.png' }" />
+                    <a class="countriesLink img-responsive" data-bind="html: name, attr: {href: '#countryDetails/' + id}"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <footer class="text-center bottom">
+        <a class="up-arrow" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <h4>World Of Soccer | 2017</h4>
+    </footer>
+</section>
